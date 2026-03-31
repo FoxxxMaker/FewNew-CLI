@@ -1,6 +1,8 @@
 # esta parte é a interface gráfica do CLI.
 
 import Tradutor as Tr
+import Request as RQ
+
 
 class Menu():
     def menu_simplificado():
@@ -12,7 +14,13 @@ class Menu():
         answer = input("Pressione Enter ou sair....")
 
         if not answer:
-            print(Tr.tradu)
+            atividade = RQ.buscar_atividade()
+            traducao = Tr.Traduzir_texto(atividade)
+
+            print(" ")
+
+            print(traducao)
+
             print(" ")
 
             print("Deseja continuar?")
@@ -21,13 +29,10 @@ class Menu():
             
             if answer.upper() == 'S':
                 Menu.menu_simplificado()
-            if answer.upper() == 'S':
-                print("Saindo....")
+            elif answer.lower() == 'N':
+                print("Saindo do Programa...")
 
-        elif answer.lower() == "sair":
-            print("Saindo do Programa...")
-
-        print(Tr.tradu())
+       
         
 
     def Menu_Principal():
@@ -41,20 +46,21 @@ class Menu():
 
         answer = input("Pressione Enter ou sair....")
 
-        if not answer:
-            print(Tr.tradu)
-            print(" ")
+        atividade = RQ.buscar_atividade()
+        traducao = Tr.Traduzir_texto(atividade)
 
-            print("Deseja continuar?")
-            print("s/n")
-            answer = input("Digite s para sim ou n para não....")
+        print(" ")
+
+        print(traducao)
+
+        print(" ")
+
+        print("Deseja continuar?")
+        print("s/n")
+        answer = input("Digite s para sim ou n para não....")
             
-            if answer.upper() == 'S':
-                Menu.menu_simplificado()
-            if answer.upper() == 'S':
-                print("Saindo....")
-
-        elif answer.lower() == "sair":
+        if answer.upper() == 'S':
+            Menu.menu_simplificado()
+        elif answer.lower() == 'N   ':
             print("Saindo do Programa...")
-
 Menu.Menu_Principal()

@@ -12,5 +12,5 @@ def buscar_atividade():
 
     # Retorna a resposta
     dados =resposta.json()
-    return dados
+    return dados["activity"]
     
