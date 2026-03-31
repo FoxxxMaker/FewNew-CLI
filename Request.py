@@ -2,16 +2,15 @@
 
 import requests
 
-# mostra o caminho da url da API
-url = "https://bored-api.appbrewery.com/random"
 
-# Faz a requisição ao API e armazena a resposta em uma variável chamada 'resposta'.
+def buscar_atividade():
+    # mostra o caminho da url da API
+    url = "https://bored-api.appbrewery.com/random"
 
-resposta = requests.get(url)
-try:
-    dados = resposta.json()
+    # Faz a requisição ao API e armazena a resposta em uma variável chamada 'resposta'.
+    resposta = requests.get(url)
 
-    Atividade = dados["activity"]
-except Exception as e:
-    print("Erro na requisição", e)
-
+    # Retorna a resposta
+    dados =resposta.json()
+    return dados
+    
