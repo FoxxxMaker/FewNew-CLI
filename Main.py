@@ -39,6 +39,4 @@ class Menu():
         elif answer.lower() == "sair":
             print("Saindo do Programa...")
             
-    
-
 Menu.Menu_Principal()
