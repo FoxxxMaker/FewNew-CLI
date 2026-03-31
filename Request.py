@@ -12,7 +12,6 @@ try:
     dados = resposta.json()
 
     Atividade = dados["activity"]
-    print(Atividade)
 except Exception as e:
     print("Erro na requisição", e)
 
