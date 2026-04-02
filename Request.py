@@ -2,7 +2,6 @@
 
 import requests
 
-
 def buscar_atividade():
     # mostra o caminho da url da API
     url = "https://bored-api.appbrewery.com/random"
