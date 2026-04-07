@@ -8,18 +8,18 @@ def label_dinamico():
     Tradu = Tradutor.Traduzir_texto(Atividade)
     lblD.config(Tradu)
 
-class app:
-    # primeira parte do front end:
-    root = tk.Tk()
-    root.title("FewNew")
-    root.geometry("400x400")
 
-    #Label de chamada
-    lbl1 = tk.Label(root, text="Clique no botão abaixo e receba uma nova ideia: ")
-    lbl1.pack(pady=20)
+# primeira parte do front end:
+root = tk.Tk()
+root.title("FewNew")
+root.geometry("400x400")
 
-    #Label Dinâmico
-    lblD = tk.Label(root,text=" ")
-    lblD.pack(pady=23)
+#Label de chamada
+lbl1 = tk.Label(root, text="Clique no botão abaixo e receba uma nova ideia: ")
+lbl1.pack(pady=20)
+
+#Label Dinâmico
+lblD = tk.Label(root,text=" ")
+lblD.pack(pady=23)
 
     
